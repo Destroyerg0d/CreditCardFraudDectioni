@@ -68,7 +68,7 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
               <Zap className="w-4 h-4" />
-              B.Tech Minor Project | Shreyansh Srivastava
+              B.Tech Major Project | Shreyansh Srivastava
             </div>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
               Credit Card{" "}

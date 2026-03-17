@@ -220,7 +220,7 @@ export default function MethodologyPage() {
         <div className="glass rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold mb-2">About This Project</h3>
           <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
-            This is a B.Tech (Computer Science & Engineering) Minor Project at Amity University, Uttar Pradesh.
+            This is a B.Tech (Computer Science & Engineering) Major Project at Amity University, Uttar Pradesh.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="p-4 rounded-lg bg-white/5">

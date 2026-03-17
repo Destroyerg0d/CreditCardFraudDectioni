@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-3">Project</h4>
             <p className="text-sm text-slate-400 mb-2">
-              B.Tech Minor Project by Shreyansh Srivastava
+              B.Tech Major Project by Shreyansh Srivastava
             </p>
             <p className="text-sm text-slate-400">
               Amity University, Uttar Pradesh
