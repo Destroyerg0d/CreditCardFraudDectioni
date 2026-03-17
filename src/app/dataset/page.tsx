@@ -29,6 +29,10 @@ import {
   smoteSteps,
 } from "@/lib/data";
 
+function fmt(n: number): string {
+  return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 const pieDataBefore = [
   { name: "Legitimate", value: 99.83, color: "#3b82f6" },
   { name: "Fraudulent", value: 0.17, color: "#ef4444" },
@@ -126,7 +130,7 @@ export default function DatasetPage() {
               </PieChart>
             </ResponsiveContainer>
             <div className="text-center text-xs text-slate-400 mt-2">
-              {classDistribution.before.legitimate.toLocaleString()} legit vs {classDistribution.before.fraudulent.toLocaleString()} fraud
+              {fmt(classDistribution.before.legitimate)} legit vs {fmt(classDistribution.before.fraudulent)} fraud
             </div>
           </div>
 
@@ -156,7 +160,7 @@ export default function DatasetPage() {
               </PieChart>
             </ResponsiveContainer>
             <div className="text-center text-xs text-slate-400 mt-2">
-              {classDistribution.after.legitimate.toLocaleString()} legit vs {classDistribution.after.fraudulent.toLocaleString()} fraud
+              {fmt(classDistribution.after.legitimate)} legit vs {fmt(classDistribution.after.fraudulent)} fraud
             </div>
           </div>
         </div>

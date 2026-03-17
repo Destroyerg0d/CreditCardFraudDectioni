@@ -33,7 +33,7 @@ function ConfusionMatrix({
       <div className="grid grid-cols-2 gap-1.5">
         <div className="bg-green-500/15 rounded-lg p-3 text-center">
           <div className="text-xs text-slate-400">True Neg</div>
-          <div className="text-lg font-bold text-green-400">{data.tn.toLocaleString()}</div>
+          <div className="text-lg font-bold text-green-400">{data.tn.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
         </div>
         <div className="bg-red-500/15 rounded-lg p-3 text-center">
           <div className="text-xs text-slate-400">False Pos</div>

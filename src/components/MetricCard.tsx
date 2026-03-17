@@ -15,9 +15,16 @@ export default function MetricCard({
   color?: string;
   icon?: React.ReactNode;
 }) {
-  const [displayed, setDisplayed] = useState(0);
+  const [displayed, setDisplayed] = useState(value);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hasMounted) return;
+    setDisplayed(0);
     const duration = 1500;
     const steps = 60;
     const increment = value / steps;
@@ -31,7 +38,7 @@ export default function MetricCard({
       setDisplayed(Math.round(current));
     }, duration / steps);
     return () => clearInterval(timer);
-  }, [value]);
+  }, [value, hasMounted]);
 
   const colorMap: Record<string, string> = {
     blue: "from-blue-500/20 to-blue-600/5 border-blue-500/20",
